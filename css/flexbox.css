@@ -1,0 +1,116 @@
+
+/*** CABEÇALHO ***/
+.cabecalhoPrincipal .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalhoPrincipal-nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/*** LISTA DE CURSOS ***/
+.conteudoPrincipal-cursos {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.conteudoPrincipal-cursos-link {
+  width: 22.5%;
+  margin: 1%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n) { margin-right: 0 }
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1) {
+margin-right: 0 }
+
+
+/*** VÍDEO ***/
+.videoSobre .container {
+  display: flex;
+}
+
+.videoSobre-sobre {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 10;
+  text-align: center;
+}
+
+.videoSobre-video, .videoSobre-sobre-list { flex-grow: 1 }
+
+.videoSobre-video { flex-shrink: 2 }
+
+
+/*** RODAPÉ ***/
+.rodapePrincipal-navMap-list {
+  display: flex;
+  /*flex-direction: column;
+  flex-wrap: wrap;*/
+  flex-flow: column wrap;
+  height: 255px;
+}
+
+.rodapePrincipal-patrocinadores .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-right: 5%;
+  width: 70%;
+}
+
+.rodapePrincipal-contatoForm { width: 25% }
+
+.rodapePrincipal-contatoForm-fieldset { display: flex }
+
+
+/*** DESIGN RESPONSIVO ***/
+@media (max-width: 768px) {
+  .cabecalhoPrincipal-nav {
+    flex-direction: column;
+  }
+
+  .cabecalhoPrincipal .container {
+    flex-direction: column;
+    align-items: initial;
+    text-align: center;
+  }
+
+  .cabecalhoPrincipal-nav-link-app { order: -1 }
+
+  .conteudoPrincipal-cursos{ flex-direction: column }
+
+  .conteudoPrincipal-cursos-link { width: 100% }
+
+  .videoSobre .container { flex-direction: column }
+
+  .videoSobre-video { margin: 0 auto }
+
+  .rodapePrincipal-navMap-list { height: auto }
+
+  .rodapePrincipal-patrocinadores .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodapePrincipal-patrocinadores-list {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+  }
+
+  .rodapePrincipal-patrocinadores-list li { padding: 10px 0 }
+
+  .rodapePrincipal-contatoForm { width: auto }
+
+  .rodapePrincipal-contatoForm-fieldset { justify-content: center }
+}
